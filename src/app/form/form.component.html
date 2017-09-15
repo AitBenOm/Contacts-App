@@ -1,0 +1,30 @@
+<br>
+<div class="row">
+
+  <p><label>Ajouter Client :</label></p>
+  <div class="col-md-6  well">
+
+
+
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nom" [(ngModel)]="Nom" name="Nom" #nom="ngModel" required>
+      </div>
+      <div class="alert alert-danger" *ngIf="(nom.invalid)">
+        Ajouter Nom
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Prénom" [(ngModel)]="Prenom" name="Prenom" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"  [(ngModel)]="Email" name="Email" required>
+      </div>
+
+      <button type="submit" (click)="ajouterClient(Nom,Prenom,Email)" class="btn btn-default pull-right" [disabled]="!Nom ||!Prenom ||!Email">Sauvegarder</button>
+    </form>
+
+  </div>
+
+</div><!-- row -->

@@ -14,3 +14,13 @@ td, th {
   padding: 8px;
 }
 
+input.ng-valid[required]{
+  border: 2px solid #16a085;
+}
+
+input.ng-invalid{
+  border-right:2px solid red;
+}
+input.ng-untouched{
+  border:2px solid #95a5a6 ;
+}

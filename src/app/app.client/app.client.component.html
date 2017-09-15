@@ -1,0 +1,36 @@
+<!-- Formulaire - ajouter Clients -->
+<!--<app-form></app-form>-->
+
+<br>
+
+<!-- Liste Clients -->
+
+<div class="row">
+
+  <div class="col-md-6">
+
+    <hr>
+
+    <p><label>Liste Clients</label></p>
+
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+      </tr>
+
+      </thead>
+      <tr *ngFor="let client of clients let i= index" (click)="AfficherDetail(i)">
+
+        <td>{{client.nom}}</td>
+        <td>{{client.prenom}}</td>
+        <td>{{client.email}}</td>
+      </tr>
+
+
+    </table>
+
+  </div>
+</div><!-- row -->

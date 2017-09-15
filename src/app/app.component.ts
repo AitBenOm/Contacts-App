@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { CLIENTS } from "./clients";
+import { Client } from "./client";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+
+  clients =  CLIENTS;
+  client: Client;
+//   SelectedClient: Client;
+
 }
